@@ -5,6 +5,7 @@
 package com.atividadejpa.entities;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,15 +30,24 @@ public class Estagio implements Serializable {
     private String descricao;
 
     @NotNull
-    @OneToOne
+    private String dataInicio;
+    @NotNull
+    private String dataFinal;
+    @NotNull
+    private int cargaHorariaTotal;
+    @NotNull
+    private String status;
+
+    @NotNull
+    @OneToOne(cascade = CascadeType.ALL)
     private Aluno aluno;
 
     @NotNull
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Empresa empresa;
 
     @NotNull
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Orientador orientador;
 
     public Long getId() {
@@ -79,7 +89,42 @@ public class Estagio implements Serializable {
     public void setOrientador(Orientador orientador) {
         this.orientador = orientador;
     }
-    
-    
+
+    public String getDataInicio() {
+        return dataInicio;
+    }
+
+    public void setDataInicio(String dataInicio) {
+        this.dataInicio = dataInicio;
+    }
+
+    public String getDataFinal() {
+        return dataFinal;
+    }
+
+    public void setDataFinal(String dataFinal) {
+        this.dataFinal = dataFinal;
+    }
+
+    public int getCargaHorariaTotal() {
+        return cargaHorariaTotal;
+    }
+
+    public void setCargaHorariaTotal(int cargaHorariaTotal) {
+        this.cargaHorariaTotal = cargaHorariaTotal;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Estagio{" + "id=" + id + ", descricao=" + descricao + ", dataInicio=" + dataInicio + ", dataFinal=" + dataFinal + ", cargaHorariaTotal=" + cargaHorariaTotal + ", aluno=" + aluno + ", empresa=" + empresa + ", orientador=" + orientador + '}';
+    }
 
 }

@@ -5,9 +5,9 @@
 package com.atividadejpa.entities;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,8 +35,8 @@ public class Empresa implements Serializable {
     @NotNull
     private String cnpj;
     
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "estagios")
-    private List<Estagio> estagios = new HashMap<>();
+    @OneToMany(fetch = FetchType.EAGER,  cascade = CascadeType.ALL)
+    private List<Estagio> estagios = new ArrayList<>();
 
     public Long getId() {
         return id;
