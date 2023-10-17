@@ -70,10 +70,11 @@ public class Factory {
 //
 //        manager.getTransaction().commit();
 //        manager.close();
+        
         // Consultando aluno por matrícula
 //        
-        String matriculaAluno = "202012010020";
-
+//        String matriculaAluno = "20222010020";
+//
 //        manager.getTransaction().begin();
 //
 //        Query query = manager.createQuery("FROM Aluno a WHERE a.matricula = :matricula");
@@ -84,14 +85,16 @@ public class Factory {
 //        manager.getTransaction().commit();
 //        manager.close();
 //        System.out.println(aluno.toString());
+
         //Atualizando um registro
 //        manager.getTransaction().begin();
 //
-//        Aluno aluno = manager.find(Aluno.class, 1L);
+//        Aluno aluno = manager.find(Aluno.class, 2L);
 //        aluno.setNome("Moacir David de Almeida Gonçalves");
 //
 //        manager.getTransaction().commit();
 //        manager.close();
+
         //Deletando um aluno
 //        manager.getTransaction().begin();
 //        
@@ -100,6 +103,7 @@ public class Factory {
 //        
 //        manager.getTransaction().commit();
 //        manager.close();
+
          //Inserindo empresas e estágios
 //        Orientador cristiano = new Orientador();
 //        cristiano.setNome("Cristiano");
@@ -140,8 +144,9 @@ public class Factory {
 //        
 //        manager.getTransaction().commit();
 //        manager.close();
+        
         //Retornando a lista de estágios de uma empresa
-//        Long idEmpresa = 20L;;
+//        Long idEmpresa = 50L;;
 //        
 //        manager.getTransaction().begin();
 //        
@@ -166,13 +171,23 @@ public class Factory {
 //        }
 
         // Removendo um estágio
-        manager.getTransaction().begin();
-        
-        Estagio e = manager.find(Estagio.class, 10L);
-        manager.remove(e);
+//        manager.getTransaction().begin();
+//        
+//        Estagio e = manager.find(Estagio.class, 10L);
+//        manager.remove(e);
+//
+//        manager.getTransaction().commit();
+//        manager.close();
 
-        manager.getTransaction().commit();
-        manager.close();
+        // Removendo uma empresa
+        
+//        manager.getTransaction().begin();
+//        
+//        Empresa emp = manager.find(Empresa.class, 40L);
+//        manager.remove(emp);
+//        
+//        manager.getTransaction().commit();
+//        manager.close();
 
     }
 }
