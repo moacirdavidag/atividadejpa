@@ -127,6 +127,7 @@ public class Factory {
 //        estagioMoacir.setDataInicio("10/03/2023");
 //        estagioMoacir.setDataFinal("03/09/2023");
 //        estagioMoacir.setCargaHorariaTotal(120);
+//        estagioMoacir.setStatus("EM ANDAMENTO");
 //        
 //        minsait.getEstagios().add(estagioMoacir);
 //        
