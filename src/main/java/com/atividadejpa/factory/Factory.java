@@ -17,6 +17,7 @@ import javax.persistence.Query;
 /**
  *
  * @author moaci
+ * @author raszz (from original branch)
  */
 public class Factory {
 
@@ -170,6 +171,8 @@ public class Factory {
 //              System.out.println("\nStatus: " + e.getStatus());
 //        }
 
+        // Efetuando Novas Remoções 
+        
         // Removendo um estágio
 //        manager.getTransaction().begin();
 //        
