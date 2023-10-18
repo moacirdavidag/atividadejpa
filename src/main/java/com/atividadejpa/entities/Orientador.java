@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 /**
  *
  * @author moaci
+ * @author raszz (from original branch)
  */
 @Entity
 @Table(name = "orientador_tb")
