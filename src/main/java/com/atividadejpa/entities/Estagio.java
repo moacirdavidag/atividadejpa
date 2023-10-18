@@ -17,6 +17,7 @@ import javax.validation.constraints.NotNull;
 /**
  *
  * @author moaci
+ * @author raszz (at fork)
  */
 @Entity
 @Table(name = "estagio_tb")
