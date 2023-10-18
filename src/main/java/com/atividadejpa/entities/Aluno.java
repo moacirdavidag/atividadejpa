@@ -18,6 +18,7 @@ import javax.validation.constraints.NotNull;
 /**
  *
  * @author moaci
+ * @author raszz 
  */
 @Entity
 @Table(name="tb_alunos")
