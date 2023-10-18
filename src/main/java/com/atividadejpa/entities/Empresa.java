@@ -19,6 +19,7 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
+ * @author raszz (at fork)
  * @author moaci
  */
 
